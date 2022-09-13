@@ -1,0 +1,14 @@
+site_name: Python Brevísimo
+theme:
+  name: material
+  palette: 
+    scheme: default
+    primary: teal
+    accent: green
+  features:
+    - navigation.instant
+    - navigation.tracking
+extra_css:
+  - custom.css
+  - extra.css
+

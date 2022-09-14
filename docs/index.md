@@ -13,7 +13,7 @@ Sin más, vamos al tema!
 ## Convenciones de uso de esta documentación:
 Si ven **TL;DR** (abreviatura en inglés de "Too Long; Didn't Read" -en español, "demasiado largo; no lo he leído"-), significa que es un resumen para que no se estresen leyendo todo lo que sigue!
 
-#### Para algunos tópicos tendremos las variantes:
+### Para algunos tópicos tendremos las variantes:
 - **Rápido** (sobre todo para repasar o para impacientes!)
 - **Normal** (para aprender de forma detallada)
 
@@ -24,7 +24,7 @@ para su ejecución directa:
 # Lo que sigue es tu primer programa en Python!
 print("hola mundo!")
 ```
-Haciendo click en ![Símbolo de Copiar](/img/copy_code.png) , se copia todo el código Python dentro del área gris para luego ser pegado en el Editor (vía botón derecho, opción **Paste**/**Pegar** o con el teclado usando la combinación de teclas **Ctrl-V**)
+Haciendo click en ![Símbolo de Copiar](img/copy_code.png) , se copia todo el código Python dentro del área gris para luego ser pegado en el Editor (vía botón derecho, opción **Paste**/**Pegar** o con el teclado usando la combinación de teclas **Ctrl-V**)
 
 Tendremos enlaces internos (a otros documentos de este Apunte): [Datos](datos.md), que también estarán en el Menú Izquierdo.
 

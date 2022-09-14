@@ -1,4 +1,4 @@
-# Bucles (Procesos repetitivos)
+# Bucle for
 ## 3 variantes
 
 ``` py

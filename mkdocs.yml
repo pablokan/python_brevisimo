@@ -18,3 +18,13 @@ markdown_extensions:
 
 extra_css:
   - css/extra.css
+
+nav:
+  - Principal: index.md
+  - Rápido:
+      - Intro: intro.md
+      - Datos: datos.md
+  - Normal:
+      - Bucles:
+          - for: bucles/for.md
+          - while: bucles/while.md

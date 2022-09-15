@@ -1,6 +1,4 @@
-# Bucle for
-## 3 variantes
-
+# Bucle **for**
 ``` py
 iterable = ["dos", "uno", "tres"]
 

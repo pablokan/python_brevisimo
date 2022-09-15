@@ -1,4 +1,13 @@
 site_name: Python Brevísimo
+
+nav:
+  - Principal: index.md
+  - Intro: intro.md
+  - Datos: datos.md
+  - Bucles:
+    - for: bucles/for.md
+    - while: bucles/while.md
+
 theme:
   name: material
   palette: 
@@ -8,6 +17,7 @@ theme:
   features:
     - navigation.instant
     - navigation.tracking
+    - content.tooltips
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -15,16 +25,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - abbr
+  - attr_list
 
 extra_css:
   - css/extra.css
-
-nav:
-  - Principal: index.md
-  - Rápido:
-      - Intro: intro.md
-      - Datos: datos.md
-  - Normal:
-      - Bucles:
-          - for: bucles/for.md
-          - while: bucles/while.md

@@ -1,10 +1,17 @@
 # Bucle for
-
 ---
-## Variante de recorrido por índice
-Ejemplo 1:
+Para la sintaxis del **for**, hay que tener en cuenta dos requisitos:  
+1. Al final de la línea tienen que poner el signo de dos puntos (:)  
+2. El bloque de código (una o más líneas que dependen del for) DEBEN estar indentadas
+
+Con los ejemplos siguientes lo entenderemos:
+
+
+## Recorrido con rango
+---
+Ejemplo #1:
 ``` py
-for i in range(3):
+for _ in range(3):
     print("hola")
 ```
 **hola  
@@ -18,11 +25,10 @@ Qué significa eso? que lo que está **adentro** del for (se dice así cuando un
 Entonces, lo que depende del for (lo que está adentro), se ejecutará según lo que se defina allí, en este primer caso, la repetición del print("hola"). 
 
 El **range(3)** está diciendo que dicha repetición se hará 3 veces.
-La variable de control o de recorrido, en este ejemplo la variable i, tomará los valores 0, 1 y 2, porque el valor de **stop**, el número 3, indica cuando el bucle debe detenerse.
 
 ---
 
-Ejemplo 2:
+Ejemplo #2:
 ``` py
 for numero in range(5):
     print(numero)
@@ -41,10 +47,6 @@ En ambos ejemplos, el **range()** recibe un solo valor (**stop**), y en estos ca
 En nuestro **Ejemplo 2**, como el rango es **5**, el bucle se ejecuta **5 veces** y, al comenzar desde **0** el último valor no es 5, sino **4**.
 
 
-## Variante de recorrido por elemento
-
-
-
-
-
+## Recorrido por elemento
+Para seguir aprendiendo sobre el bucle **for**, seguimos en [Listas](../listas.md)
 

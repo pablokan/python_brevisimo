@@ -2,11 +2,11 @@ site_name: Python Brevísimo
 
 nav:
   - Principal: index.md
-  - Intro: intro.md
+  - Introducción: intro.md
   - Datos: datos.md
-  - Bucles:
-    - for: bucles/for.md
-    - while: bucles/while.md
+  - Variables: variables.md
+  - Bucles (for y while): bucles.md
+  - Listas: listas.md
 
 theme:
   name: material

@@ -5,9 +5,9 @@ ___
 
 Este es un apunte de Python nivel introductorio para
 Linux y Windows (no tengo Mac y no hablo de lo que no uso).
-Casi ya no uso Windows en los últimos años pero en este caso haré el esfuerzo (quiero enseñar a programar, más adelante mis estudiantes elegirán su sistema operativo).
+Casi ya no uso Windows en los últimos años pero en este caso haré el esfuerzo (quiero enseñar a programar solamente, más adelante elegirás tu sistema operativo de preferencia -ojalá Linux 😊-).
 
-Después de más de 30 años de docencia en general y en mi décimo año de enseñar Python, escribo este apunte porque tengo demasiados alumnos y temo no poder llegar bien a todos.
+Después de más de 30 años de docencia en general y en mi décimo año de enseñar Python, escribo este apunte porque tengo demasiados alumnos y temo no poder llegar bien a todos ustedes.
 
 Sin más, vamos al tema!
 ## Convenciones de uso de esta documentación:
@@ -26,6 +26,6 @@ print("hola mundo!")
 ```
 Haciendo click en ![Símbolo de Copiar](img/copy_code.png) , se copia todo el código Python dentro del área gris para luego ser pegado en el Editor (vía botón derecho, opción **Paste**/**Pegar** o con el teclado usando la combinación de teclas **Ctrl-V**)
 
-Tendremos enlaces internos (a otros documentos de este Apunte): [Datos](datos.md), que también estarán en el Menú Izquierdo.
+Tendremos enlaces internos (a otros documentos de este Apunte): [Introducción](intro.md), que también estarán en el Menú Izquierdo.
 
 Y enlaces a páginas externas: [Sitio Oficial de Python](https://www.python.org/)

@@ -15,6 +15,5 @@ El bucle **while**, se usa habitualmente para realizar procesos de una cantidad 
 
 Vamos a verlos en detalle:
 
-## [for](bucles/for.md)
-## [while](bucles/while.md)
+## Bucles [for](bucles/for.md) y [while](bucles/while.md)
 

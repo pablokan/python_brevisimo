@@ -8,6 +8,8 @@ nav:
   - Bucles: bucles.md
   - Bucle for: bucles/for.md
   - Listas: listas.md
+  - Funciones: funciones.md
+
 
 theme:
   name: material

@@ -5,11 +5,14 @@ nav:
   - Introducción: intro.md
   - Datos: datos.md
   - Variables: variables.md
+  - Alternativa if: if.md
   - Bucles: bucles.md
   - Bucle for: bucles/for.md
   - Listas: listas.md
   - Funciones: funciones.md
-
+  - Funciones básicas: funciones/func_base.md
+  - Funciones avanzadas: funciones/func_av.md
+  - Objetos: objetos.md
 
 theme:
   name: material

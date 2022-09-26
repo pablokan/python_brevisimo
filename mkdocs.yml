@@ -13,6 +13,8 @@ nav:
   - Funciones básicas: funciones/func_base.md
   - Funciones avanzadas: funciones/func_av.md
   - Objetos: objetos.md
+  - GUI: gui.md
+  - PySide6: pyside6.md
 
 theme:
   name: material

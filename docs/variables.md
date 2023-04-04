@@ -61,11 +61,14 @@ Para ello, se utiliza la función **input()**, que nos permite colocar entre sus
 nombre = input("Ingrese su nombre: ")
 print("Hola", nombre)
 ```
+Es importante tener en cuenta que SIEMPRE, la función **input()**, toma el dato ingresado como **str**. Es decir que si ingreso un número, tengo que convertirlo a **int** o bien a **float** para poder operar con ese dato. De no hacerse dicha conversión, cualquier operación sobre ese número será en realidad una operación de strings.
 
-
-
-
-
-
-
-
+```py
+edad = input("Ingrese su edad: ")
+print("El doble de tu edad es", edad * 2)
+# ups !
+# olvidé convertir a entero, ahora va:
+edad = int(edad)
+# pruebo de nuevo:
+print("El doble de tu edad es", edad * 2)
+```

@@ -9,7 +9,7 @@ Con los ejemplos siguientes lo comenzaremos a entender:
 
 ## Recorrido que depende de la respuesta del usuario
 ---
-Ejemplo #1:
+Ejemplo:
 ``` py
 respuesta = "si"
 while respuesta == "si":
@@ -24,8 +24,16 @@ Entonces, lo que depende del while (lo que está adentro), se ejecutará MIENTRA
 
 ---
 
-Ejemplo #2:
+## Recorrido que depende de una condición sin interacción
+---
+Ejemplo:
 ``` py
-pass
+n = 5
+while n < 10:
+    print("dentro del while")
+    n = n + 1  # contador
+    if i == 5:
+        print("llegó el 5!!!!")
+print(n)
 ```
 ---

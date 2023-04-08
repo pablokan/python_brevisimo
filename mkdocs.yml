@@ -8,6 +8,7 @@ nav:
   - Alternativa if: if.md
   - Bucles: bucles.md
   - Bucle for: bucles/for.md
+  - Bucle while: bucles/while.md
   - Listas: listas.md
   - Funciones: funciones.md
   - Funciones básicas: funciones/func_base.md

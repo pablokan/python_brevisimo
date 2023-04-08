@@ -2,9 +2,9 @@
 ---
 Para la sintaxis del **for**, hay que tener en cuenta dos requisitos:  
 1. Al final de la línea tienen que poner el signo de dos puntos (:)  
-2. El bloque de código (una o más líneas que dependen del for) DEBEN estar indentadas
+2. El bloque de código (una o más líneas que dependen del for) DEBE estar indentado
 
-Con los ejemplos siguientes lo entenderemos:
+Con los ejemplos siguientes empezaremos a entenderlo:
 
 
 ## Recorrido con rango

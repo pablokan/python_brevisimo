@@ -8,11 +8,37 @@ Además puede contener valores de cualquier tipo de dato simultáneamente:
 ```py
 cambalache = [9, "jota", False, "🤖👽🐍", -8.2]
 
-print(a[1])  # muestra el segundo elemento el primero está en posición cero
+print(cambalache[1])  # muestra el segundo elemento (el primero está en posición cero)
 
-print(a)  # muestra toda la lista con los corchetes
+print(cambalache)  # muestra toda la lista con los corchetes
 
-print("Cantidad de elementos de la lista a: ", len(a))  # len: longitud
+print("Cantidad de elementos de la lista cambalache: ", len(cambalache))  # len: longitud
+
+# Ahora declaro, asigno y reemplazo:
+otraLista = []  # lista vacía - Sirve como declaración
+otraLista[0] = 111  # IndexError: list assignment index out of range
+# No funcionó porque la posición cero aún no existe
+otraLista = ["q"] # asigno
+print(otraLista)
+otraLista[0] = 111  # reemplazo (ahora funciona porque la posición cero ya tenía valor)
+print(otraLista)
+
+# Y finalmente agrego, inserto, saco y borro 
+otraListaMas = []
+otraListaMas.append("primero") # agrego
+print(otraListaMas)
+otraListaMas.append("segundo") # agrego otro valor al fondo
+print(otraListaMas)
+otraListaMas.insert(1, "al medio") # inserto en la posición 1
+print(otraListaMas)
+otraListaMas[1] = "reemplazo al que estaba al medio"
+print(otraListaMas)
+otraListaMas.pop(1)  # elimina por posición, por defecto el último
+print(otraListaMas)
+otraListaMas.remove("primero")  # elimina por valor
+print(otraListaMas)
+del otraListaMas[1:3] # borra por índice o por slice
+
 ```
 
 Se pueden recorrer fácilmente con el [for](bucles/for.md)

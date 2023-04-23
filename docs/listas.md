@@ -2,7 +2,21 @@
 
 Las listas (como otros iterables que tiene Python), son variables de almacenamiento múltiple, es decir, que sirven para guardar varios datos simultáneamente.
 
+Tienen una capacidad de almacenamiento dinámica (no se requiere ni se necesita un tamaño predefinido).
+Además puede contener valores de cualquier tipo de dato simultáneamente:
+
+```py
+cambalache = [9, "jota", False, "🤖👽🐍", -8.2]
+
+print(a[1])  # muestra el segundo elemento el primero está en posición cero
+
+print(a)  # muestra toda la lista con los corchetes
+
+print("Cantidad de elementos de la lista a: ", len(a))  # len: longitud
+```
+
 Se pueden recorrer fácilmente con el [for](bucles/for.md)
+
 ``` py
 unaLista = ["dos", "uno", "tres"]
 #Se llevan bien con la instrucción de bucle for

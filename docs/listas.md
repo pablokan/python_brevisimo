@@ -16,29 +16,40 @@ print("Cantidad de elementos de la lista cambalache: ", len(cambalache))  # len:
 
 # Ahora declaro, asigno y reemplazo:
 otraLista = []  # lista vacía - Sirve como declaración
+
 otraLista[0] = 111  # IndexError: list assignment index out of range
 # No funcionó porque la posición cero aún no existe
+
 otraLista = ["q"] # asigno
 print(otraLista)
+
 otraLista[0] = 111  # reemplazo (ahora funciona porque la posición cero ya tenía valor)
 print(otraLista)
+
 
 # Y finalmente agrego, inserto, saco y borro 
 otraListaMas = []
 otraListaMas.append("primero") # agrego
 print(otraListaMas)
+
 otraListaMas.append("segundo") # agrego otro valor al fondo
 print(otraListaMas)
+
 otraListaMas.insert(1, "al medio") # inserto en la posición 1
 print(otraListaMas)
+
 otraListaMas[1] = "reemplazo al que estaba al medio"
 print(otraListaMas)
+
 otraListaMas.pop(1)  # elimina por posición, por defecto el último
 print(otraListaMas)
+
 otraListaMas.remove("primero")  # elimina por valor
 print(otraListaMas)
-del otraListaMas[1:3] # borra por índice o por slice
 
+otraListaMas = [100, 200, 300, 400, 500]
+del otraListaMas[1:3] # borra por índice o por slice
+print(otraListaMas)
 ```
 
 Se pueden recorrer fácilmente con el [for](bucles/for.md)

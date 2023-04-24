@@ -13,8 +13,11 @@ print(cambalache[1])  # muestra el segundo elemento (el primero está en posici�
 print(cambalache)  # muestra toda la lista con los corchetes
 
 print("Cantidad de elementos de la lista cambalache: ", len(cambalache))  # len: longitud
+```
 
-# Ahora declaro, asigno y reemplazo:
+Ahora declaro, asigno y reemplazo:
+
+```py
 otraLista = []  # lista vacía - Sirve como declaración
 
 otraLista[0] = 111  # IndexError: list assignment index out of range
@@ -25,9 +28,11 @@ print(otraLista)
 
 otraLista[0] = 111  # reemplazo (ahora funciona porque la posición cero ya tenía valor)
 print(otraLista)
+```
 
+Y finalmente agrego, inserto, saco y borro
 
-# Y finalmente agrego, inserto, saco y borro 
+```py
 otraListaMas = []
 otraListaMas.append("primero") # agrego
 print(otraListaMas)
@@ -76,4 +81,11 @@ print("Recorrido por elemento con enumeración")
 for i, e in enumerate(unaLista, start=1):
     print(i, e)
 print("-----------------------------------------------")
+
+# Carga de elementos dentro de un for
+listaNombres = []
+for i in range(5):
+    nombre = input("Ingrese un nombre: ")
+    listaNombres.append(nombre)
+print(listaNombres)
 ```

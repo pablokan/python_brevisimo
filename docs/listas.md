@@ -89,3 +89,12 @@ for i in range(5):
     listaNombres.append(nombre)
 print(listaNombres)
 ```
+
+Listas pararelas
+
+``` py
+nombres = ["Juan", "Ana", "Luis"]  # misma posición, misma persona
+edades = [32, 87, 12]  # entonces Juan tiene 32 años
+
+personas = [["Juan", 32], ["Ana", 87], ["Luis", 12]]  # es lo mismo con listas anidadas
+```

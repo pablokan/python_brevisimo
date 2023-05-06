@@ -1,5 +1,7 @@
 # Listas
 
+---
+
 Las listas (como otros iterables que tiene Python), son variables de almacenamiento múltiple, es decir, que sirven para guardar varios datos simultáneamente.
 
 Tienen una capacidad de almacenamiento dinámica (no se requiere ni se necesita un tamaño predefinido).

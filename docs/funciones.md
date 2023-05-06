@@ -10,7 +10,7 @@ De cualquier manera, en términos prácticos, vamos a dividir el tratamiento ent
 
 ### Vamos a verlas en detalle:
 
-## Funciones [básicas](funciones/func_base.md) y [parametrización avanzada](bucles/func_av.md)
+## Funciones [básicas](funciones/func_base.md) y [parametrización avanzada](funciones/func_av.md)
 
 
 

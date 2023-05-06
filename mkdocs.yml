@@ -10,6 +10,7 @@ nav:
   - Bucle for: bucles/for.md
   - Bucle while: bucles/while.md
   - Listas: listas.md
+  - Cadenas: cadenas.md
   - Funciones: funciones.md
   - Funciones básicas: funciones/func_base.md
   - Funciones avanzadas: funciones/func_av.md

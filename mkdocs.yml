@@ -28,6 +28,7 @@ theme:
     - navigation.instant
     - navigation.tracking
     - content.tooltips
+    - content.code.copy
 
 markdown_extensions:
   - pymdownx.highlight:

@@ -1,5 +1,9 @@
 # Funciones
 
+**Buenas prácticas!** 
+
+Las funciones permiten modularizar un programa, dividiéndolo en porciones más comprensibles y simples de mantener. Son una herramienta imprescindible para la programación limpia!
+
 Las funciones en Python se pueden considerar de dos tipos:  
 
 1. **Subprogramas** o **procedimientos**: Son fragmentos de código que realizan una tarea sin necesidad de devolver ningún dato. Suelen ser de un solo uso y su finalidad es dividir el programa en componentes más pequeños y más fácilmente depurables y legibles. Ejemplos: función de carga, función de salida, hacer una línea separadora, etc.

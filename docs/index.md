@@ -2,11 +2,12 @@
 
 ## Apunte de Cátedra de **Programación 1** de [iTec Río Cuarto](https://www.itecriocuarto.org.ar/)
 
-### documentación escrita por: *kan / pablokan / Pablo Kaniefsky*
-
+### documentación escrita por: 
+*kan / pablokan / Pablo Kaniefsky*
+/ email: pablokan@itecriocuarto.org.ar
 ___
 
-Este es un apunte de Python nivel introductorio agnóstico al sistema operativo (utilizo en esta materia, de manera indistinta, equipos con Linux, Mac, ChromeOS y Windows).
+Este es un apunte de Python nivel introductorio agnóstico al sistema operativo (utilizo en esta materia, de manera indistinta, equipos con Linux, MacOS, ChromeOS y Windows).
 Casi ya no uso Windows en los últimos años pero en este caso haré el esfuerzo (quiero enseñar a programar solamente, más adelante elegirás tu sistema operativo de preferencia -ojalá Linux 😊-).
 
 Después de más de 30 años de docencia en general y más de 10 de enseñar Python, escribo y reescribo este apunte porque tengo demasiados alumnos y temo no poder llegar bien a todos ustedes.

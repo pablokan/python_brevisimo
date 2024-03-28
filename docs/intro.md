@@ -40,7 +40,7 @@ Antes de comenzar a usar el editor, crear una carpeta vacía para el proyecto de
 
 **Materia Programación 1 de Primer Año**, NO LO HAGAS, en cambio ponele, por ejemplo:
 
-**prog1_2022** (nombre de carpeta bien de programador 😏)
+**prog1_2024** (nombre de carpeta bien de programador 😏)
 
 Apenas se ingresa en el **VS Code**, abrir la carpeta recientemente creada (**primer_proyecto**) del siguiente modo: **Ctrl-K-Ctrl-O** -oprimen la tecla Ctrl y sin soltarla, oprimen la letra K y luego la letra O- o bien **File -> Open Folder**.
 

@@ -28,12 +28,14 @@ Entonces, lo que depende del while (lo que está adentro), se ejecutará MIENTRA
 ---
 Ejemplo:
 ``` py
-n = 5
-while n < 10:
+n = 0
+while n < 5:
     print("dentro del while")
     n = n + 1  # contador
-    if i == 5:
-        print("llegó el 5!!!!")
-print(n)
+    print(n)
+    if n == 3:
+        print("llegó el 3!!!!")
+print("afuera del while porque dejó de cumplirse la condición")
 ```
+(había un error en este ejemplo, gracias Lucas!)
 ---

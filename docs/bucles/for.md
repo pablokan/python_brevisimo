@@ -14,7 +14,8 @@ Ejemplo #1:
 for _ in range(3):
     print("hola")
 ```
-**hola  
+**
+hola  
 hola  
 hola
 **
@@ -33,7 +34,8 @@ Ejemplo #2:
 for numero in range(5):
     print(numero)
 ```
-**0  
+**
+0  
 1  
 2  
 3  

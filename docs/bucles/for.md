@@ -14,11 +14,9 @@ Ejemplo #1:
 for _ in range(3):
     print("hola")
 ```
-**
+**hola  
 hola  
-hola  
-hola
-**
+hola**
 
 Este ejemplo es un proceso repetitivo que se mueve en un rango 3. 
 Qué significa eso? que lo que está **adentro** del for (se dice así cuando una o varias líneas del programa están **indentadas**, es decir, con una especie de sangría: NO comienzan justo debajo del for, sino algunas columnas más a la derecha).
@@ -34,13 +32,11 @@ Ejemplo #2:
 for numero in range(5):
     print(numero)
 ```
-**
-0  
+**0  
 1  
 2  
 3  
-4  
-**
+4**
 
 En este segundo caso, habrá 5 iteraciones, que a diferencia del **Ejemplo 1** no serán repeticiones estrictas, en cambio, el valor de la variable **numero** se irá incrementando en cada vuelta del **for**.
 

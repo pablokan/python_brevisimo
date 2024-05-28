@@ -4,7 +4,7 @@
 def raya():
     print("----------------------------")
 ```
-Una función debe declararse con la palabra reservada **def**, luego un nombre (mismo criterio de nombrado que las [variables](../variables.md#como-se-puede-llamar-una-variable)), y luego el bloque de código que pertenece a la función son todas las líneas que estén indentadas (con sangría).
+Una función debe declararse con la palabra reservada **def**, luego un nombre (mismo criterio de nombrado que las [variables](../variables.md#como-se-puede-llamar-una-variable)), y luego el bloque de código que pertenece a la función (son todas las líneas que estén indentadas).
 
 ```py
 def raya():
@@ -17,8 +17,8 @@ raya()
 ```
 Una función que no retorna valor (un procedimiento) se ejecuta poniendo su nombre y sus paréntesis. Puede ejecutarse más de una vez.
 
-### Parámetros
-Si se quiere customizar la función se debe hacerlo definiendo **parámetros**, que son variables que se colocan entre los paréntesis en la definición de la función. Y se reemplazan por **argumentos** enviados durante la ejecución. Veamos un ejemplo:
+### **Parámetros**
+Si se quiere flexibilizar el comportamiento de la función y de esa manera darle mayor utilidad, se debe hacerlo definiendo **parámetros**, que son variables que se colocan entre los paréntesis en la definición de la función. Dichos parámetros serán reemplazan por **argumentos** enviados durante la ejecución. Veamos un ejemplo:
 
 Supongamos que nos parece que nuestra función raya es muy limitada (tiene una cantidad fija de caracteres y además son solamente guiones). La vamos a hacer más flexible:
 
@@ -38,8 +38,8 @@ def raya(cantidad, caracter): # parámetros: cantidad, caracter
         print(caracter, end="")
     print()
 
-raya(20, "-") # argumentos: 20, "-"
-raya(10, "+") # argumentos: 10, "+"
+raya(20, "-") # argumentos: 20, "-" # reemplazan a los parámetros 
+raya(10, "+") # argumentos: 10, "+" # 10 reemplaza a cantidad y + a caracter
 raya(30, "$") # argumentos: 30, "$"
 
 # Salida:
@@ -81,10 +81,13 @@ def doble(numero):
 
 doble(3)
 ```
-Si en cambio, queremos que el valor doble del argumento enviado sea retornado, debemos printear la función:
+Si en cambio, queremos que el valor doble del argumento enviado sea retornado, debemos printear la función (o bien asignarla o también operarla):
 ```py
 def doble(numero):
     return numero*2
 
 print(doble(3))
+print(f'El doble del doble es {doble(4) * 2}')
+dobleDe9 = doble(9)
+print(dobleDe9)
 ```

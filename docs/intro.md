@@ -4,7 +4,7 @@
 
 desde aquí: [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-### Instalar Python
+### Instalar Python en Windows
 
 (DEBEN tildar la casilla de “Agregar al PATH”)
 

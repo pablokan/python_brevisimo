@@ -2,26 +2,22 @@
 
 ## Apunte de Cátedra de **Programación 1** de [iTec Río Cuarto](https://www.itecriocuarto.org.ar/)
 
-### documentación escrita por: 
-*kan / pablokan / Pablo Kaniefsky*
+documentación escrita por: 
+*kan / Pablo Kaniefsky*
 / email: pablokan@itecriocuarto.org.ar
 ___
 
 Este es un apunte de Python nivel introductorio agnóstico al sistema operativo (utilizo en esta materia, de manera indistinta, equipos con Linux, MacOS, ChromeOS y Windows).
-Casi ya no uso Windows en los últimos años pero en este caso haré el esfuerzo (quiero enseñar a programar solamente, más adelante elegirás tu sistema operativo de preferencia -ojalá Linux 😊-).
+Casi ya no uso Windows en los últimos años pero en este caso haré el esfuerzo (solamente quiero enseñar a programar, más adelante elegirás tu sistema operativo de preferencia -ojalá Linux 😊-).
 
 Después de más de 30 años de docencia en general y más de 10 de enseñar Python, escribo y reescribo este apunte porque tengo demasiados alumnos y temo no poder llegar bien a todos ustedes.
 
 Sin más, vamos al tema!
 
-## Convenciones de uso de esta documentación:
+## Convenciones de uso de esta documentación
 
-Si ven **TL;DR** (abreviatura en inglés de "Too Long; Didn't Read" -en español, "demasiado largo; no lo he leído"-), significa que es un resumen para que no se estresen leyendo todo lo que sigue!
-
-### Para algunos tópicos tendremos las variantes:
-
-- **Rápido** (sobre todo para repasar o para impacientes!)
-- **Normal** (para aprender de forma detallada)
+Si agrego **TL;DR** (abreviatura en inglés de "Too Long; Didn't Read" -en español, "demasiado largo; no lo he leído"-), significa que es un resumen para que no se estresen leyendo todo lo que sigue!
+___
 
 Los bloques de código están escritos para ser copiados y pegados
 para su ejecución directa:

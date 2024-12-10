@@ -16,8 +16,8 @@ Después de más de 30 años de docencia en general y más de 10 de enseñar Pyt
 Sin más, vamos al tema!
 
 ## Convenciones de uso de esta documentación
-
-Si agrego **TL;DR** (abreviatura en inglés de "Too Long; Didn't Read" -en español, "demasiado largo; no lo he leído"-), significa que es un resumen para que no se estresen leyendo todo lo que sigue!
+!!! note "TL;DR"
+    Si agrego **TL;DR** (abreviatura en inglés de "Too Long; Didn't Read" -en español, "demasiado largo; no lo he leído"-), significa que es un resumen para que no se estresen leyendo todo lo que sigue!
 ___
 
 Los bloques de código están escritos para ser copiados y pegados

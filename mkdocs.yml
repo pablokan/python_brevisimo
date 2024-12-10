@@ -19,11 +19,14 @@ nav:
   - PySide6: pyside6.md
 
 theme:
+  language: es
+  font:
+    text: JetBrains Mono
   name: material
   palette: 
-    scheme: default
-    primary: amber
-    accent: deep orange
+    scheme: slate
+    primary: cyan
+    accent: teal
   features:
     - navigation.instant
     - navigation.tracking

@@ -1,74 +1,80 @@
 # Comienzo rápido!
 
-### Descargar Python
+## Estructura de carpetas (Árbol de directorios)
+En Linux, oprimiendo la tecla Windows (en Linux le decimos SUPER) podemos acceder a todas las aplicaciones. Si hemos instalado Linux Mint, además tendremos un panel inferior donde veremos varias aplicaciones entre ellas el Explorador de Archivos y la Terminal.
+<figure markdown="span">
+  ![Panel Principal](img/main_panel.png){ width="200" }
+  <figcaption>Panel Principal</figcaption>
+</figure>
+Cuando abrimos el Explorador de Archivos (Files) o bien ejecutamos una *terminal* (también llamada *consola*), nos encontramos parados en nuestro directorio (o carpeta) base.
+Para cada usuario, su directorio base será */home/nombre_usuario*. 
 
-desde aquí: [https://www.python.org/downloads/](https://www.python.org/downloads/)
+En mi caso será **/home/kan/** (ese soy yo), y si vos sos Ana será **/home/ana/** y si sos Pedro será **/home/pedro/**
 
-### Instalar Python en Windows
+<figure markdown="span">
+  ![Explorador de Archivos](img/home_dir.png){ width="550" }
+  <figcaption>Explorador de Archivos</figcaption>
+</figure>
 
-(DEBEN tildar la casilla de “Agregar al PATH”)
+<figure markdown="span">
+  ![Terminal](img/home_dir_terminal.png){ width="550" }
+  <figcaption>Terminal</figcaption>
+</figure>
 
-![](img/win_ins.png)
+Como se puede observar, en ambas aplicaciones veremos lo mismo: varias carpetas estándar como Documentos, Imágenes, etc.
 
-### Descargar Visual Studio Code
+Para armar la estructura mínima requerida para empezar, lo podemos hacer como seguramente sabemos, usando el Explorador de Archivos o bien la terminal. El resultado será el mismo.
 
-desde aquí: [Visual Studio Code](https://code.visualstudio.com/download)
+La idea es que nos vayamos familiarizando con la terminal que es la herramienta habitual de todo Desarrollador.
 
-### Instalar el editor **Visual Studio Code**
-   
-### Configurar el editor
+Para dejar todo listo, crearemos una carpeta de nombre **itec** y dentro de ella otra carpeta de nombre **programacion1**.
 
-- Configuración básica de VS Code (se hace por ÚNICA VEZ!)
-- **Ctrl-Shift-X** (Extensions): Escribir **python**, y luego instalar la extensión Python de Microsoft (aparece en primer lugar)
-  
-![](img/vsc_ext.png)
+Los siguientes comandos realizan esas acciones, con **mkdir** creamos un directorio y con **cd** entramos allí.
+Podés copiar y pegar o escribir estos comandos en tu terminal y apretar la tecla **Enter**
+``` console
+mkdir itec
+cd itec
+mkdir programacion1
+cd programacion1
+```
 
-- *Recomendado*: configurar adicionalmente hotkeys para ejecución y terminal.
-- **File -> Preferences -> Keyboard Shortcuts**
+!!! note "Importante!"
+    Solamente letras minúsculas del alfabeto estándar -sin letras acentuadas ni eñe-, números y el caracter guión bajo para nombrar carpetas y archivos de programa. Si estás tentado a ponerle a una carpeta, por ejemplo:
+    
+    **Materia Programación 1 de Primer Año**, NO LO HAGAS, 
+    
+    en cambio ponele, por ejemplo:
+    
+    **programacion1** o **prog_1** (nombres de carpetas bien de programador 😏)
 
-Para la ejecución del programa: escribir **python run**, seleccionar “Run Python File in Terminal”, oprimir la combinación de teclas preferida (por ejemplo **Ctrl-Shift-F10** o **Ctrl-R**) y dar Enter para asignar:
 
-![](img/vsc_ks1.png)
+## Vamos ahora a prepararnos para programar!
+Apenas se ingresa en el Editor de Texto, lo primero que hacemos es guardarlo, de ese modo le podemos poner un nombre y ubicarlo en la carpeta que hemos creado. Eso lo hacemos con la combinación de teclas  **Ctrl-S**. Se nos abrirá una ventana y allí ingresaremos en el directorio **itec** y luego en **programacion1**. Le ponemos de nombre **hola_mundo.py** y lo guardamos.
 
-Para ver o ir a la consola o terminal (el área inferior del editor donde se observa la ejecución del programa): escribir **view term**, aparece “View: Toggle Terminal”, oprimir la combinación (ejemplo: **Ctrl-T**)
+Si cerramos la ventana del archivo (NO la del editor), igualmente podemos abrir uno nuevo con **Ctrl-N** para luego repetir lo anterior, o sea grabarlo y asignarle un nombre. Verificar que tenga la extensión **.py** para que el editor reconozca que será un programa en Python y luego pueda ser ejecutado apropiadamente en la terminal.
 
-### Vamos ahora a programar!
 
-Antes de comenzar a usar el editor, crear una carpeta vacía para el proyecto desde el Explorador de Archivos de tu sistema operativo. (Llamarla, por ejemplo, **primer_proyecto** o cualquier otro nombre que se les ocurra).
-
-#### IMPORTANTE: solamente letras minúsculas del alfabeto estándar -sin letras acentuadas ni eñe-, números y el caracter guión bajo **_** para nombrar carpetas y archivos de programa. Si estás tentado a ponerle a una carpeta, por ejemplo:
-
-**Materia Programación 1 de Primer Año**, NO LO HAGAS, en cambio ponele, por ejemplo:
-
-**prog1_2024** (nombre de carpeta bien de programador 😏)
-
-Apenas se ingresa en el **VS Code**, abrir la carpeta recientemente creada (**primer_proyecto**) del siguiente modo: **Ctrl-K-Ctrl-O** -oprimen la tecla Ctrl y sin soltarla, oprimen la letra K y luego la letra O- o bien **File -> Open Folder**.
-
-Luego **Ctrl-N**, para abrir un archivo en blanco, e inmediatamente, **Ctrl-S**, para asignarle un nombre al programa (**hola_mundo.py**) y grabarlo. Verificar que tenga la extensión **.py** para que el editor reconozca que será un programa en Python.
-
-Verificar en la esquina inferior derecha si figura la versión de Python en uso (al momento de escribir esto, va por la 3.10.7, pero puede ser cualquier otra versión, siempre que sea superior a 3.7.0) para comprobar que el editor está reconociendo bien el programa y que Python esté instalado:
-
-![](img/vsc_pyv.png)
-
-Listos para el Hola Mundo!
-Copiar y pegar:
+## Escribamos nuestro primer programa!
+Copiar y pegaren el editor:
 
 ```py
    print("Hola Mundo")
 ```
+No olvidar grabar: **Ctrl-S** 
 
-Y ahora vamos a **ejecutar** (en inglés: run) el programa. Es decir, hacerlo andar para obtener un resultado.Con el teclado: **Ctrl-Shift-F10** (o la combinación que eligieron)
+Ahora vamos a **ejecutar** (en inglés: run) el programa. Es decir, hacerlo andar para obtener un resultado.Nos vamos a la terminal y escribimos allí:
+``` console
+python3 hola_mundo.py
+```
 
-En la consola o terminal (la zona inferior de la pantalla del editor),
-debería salir el cartelito:
+Si todo está bien debería salir el cartelito:
 
 **Hola Mundo**
 
-![](img/hola_mundo.png)
+![](img/exec_hola_mundo.png)
 
-Hemos utilizado nuestra primera **función**.
+Hemos hecho andar el programa y hemos utilizado nuestra primera **función**.
 
-La función **print** nos sirve para mostrar datos por la pantalla.
+La función **print** nos sirve para mostrar datos por la pantalla (Ya seguiremos hablando de ella).
 
-Si llegamos con éxito hasta aquí, hemos escrito y ejecutado nuestro primer
-programa en Python!
+Si llegamos con éxito hasta aquí, hemos escrito y ejecutado nuestro primer programa en Python!

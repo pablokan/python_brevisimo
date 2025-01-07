@@ -26,9 +26,16 @@ theme:
     
   name: material
   palette: 
-    scheme: slate
-    primary: cyan
-    accent: green
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Cambiar a modo oscuro
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+
   features:
     - navigation.instant
     - navigation.tracking
@@ -47,6 +54,9 @@ markdown_extensions:
   - pymdownx.superfences
   - abbr
   - attr_list
-
+  - pymdownx.tilde
+  - md_in_html
+      
+  
 extra_css:
   - css/extra.css

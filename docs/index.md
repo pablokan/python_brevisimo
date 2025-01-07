@@ -5,11 +5,11 @@
 documentación escrita por: 
 *kan / Pablo Kaniefsky*
 / email: pablokan@itecriocuarto.org.ar
-(actualizado 2024)
+(actualizado 2025)
 ___
 
-Este es un apunte de Python nivel introductorio agnóstico al sistema operativo (utilizo en esta materia, de manera indistinta, equipos con Linux, MacOS, ChromeOS y Windows).
-Casi ya no uso Windows en los últimos años pero en este caso haré el esfuerzo (solamente quiero enseñar a programar, más adelante elegirás tu sistema operativo de preferencia -ojalá Linux 😊-).
+Este ~~es~~ fue un apunte de Python nivel introductorio agnóstico al sistema operativo (utilizo en esta materia, de manera indistinta, equipos con Linux, MacOS, ChromeOS y ~~Windows~~ ningún otro).
+~~Casi ya no uso~~ No uso para nada Windows en los últimos años ~~pero en este caso haré el esfuerzo~~ y ya no haré el esfuerzo (quiero enseñar a programar y ~~Windows~~ ese otro sistema operativo es hartante!!!! 😠).
 
 Después de más de 30 años de docencia en general y más de 10 de enseñar Python, escribo y reescribo este apunte porque tengo demasiados alumnos y temo no poder llegar bien a todos ustedes.
 

@@ -58,22 +58,22 @@ Si cerramos la ventana del archivo (NO la del editor), igualmente podemos abrir 
 Copiar y pegaren el editor:
 
 ```py
-   print("Hola Mundo")
+   print("hola mundo")
 ```
 No olvidar grabar: **Ctrl-S** 
 
-Ahora vamos a **ejecutar** (en inglés: run) el programa. Es decir, hacerlo andar para obtener un resultado.Nos vamos a la terminal y escribimos allí:
+Ahora vamos a **ejecutar** el programa (en inglés: **run the program** -por eso los devs acostumbramos decir *"correr el programa"*). Es decir, hacerlo andar para obtener un resultado. Nos vamos a la terminal y escribimos allí:
 ``` console
 python3 hola_mundo.py
 ```
 
-Si todo está bien debería salir el cartelito:
+Si todo está bien debería producirse la siguiente salida:
 
-**Hola Mundo**
+**hola mundo**
 
 ![](img/exec_hola_mundo.png)
 
-Hemos hecho andar el programa y hemos utilizado nuestra primera **función**.
+Hemos ejecutado el programa usando el intérprete **python3** y utilizamos nuestra primera **función**.
 
 La función **print** nos sirve para mostrar datos por la pantalla (Ya seguiremos hablando de ella).
 

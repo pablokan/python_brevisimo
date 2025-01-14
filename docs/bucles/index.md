@@ -2,7 +2,7 @@
 
 Un bucle (**loop** en inglés), es un proceso **iterativo** que ocurre durante la ejecución del programa.
 
-**Iteración** es un concepto parecido a **repetición** pero no es un sinónimo exacto porque en la iteración, cada vez que se reinicia el proceso, puede haber cambios parciales en la ejecución. 
+**Iteración** es un concepto parecido a **repetición** pero no es un sinónimo exacto porque en la iteración, cada vez que se reinicia el proceso, puede haber cambios parciales en la ejecución (cambio de estado).
 
 Lo iremos viendo en la práctica! 
 
@@ -16,5 +16,5 @@ El bucle **while**, se usa habitualmente para realizar procesos de una cantidad 
 
 Vamos a verlos en detalle:
 
-## Bucles [for](bucles/for.md) y [while](bucles/while.md)
+## Bucles [for](for.md) y [while](while.md)
 

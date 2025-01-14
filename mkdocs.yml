@@ -6,17 +6,18 @@ nav:
   - Datos: datos.md
   - Variables: variables.md
   - Alternativa if: if.md
-  - Bucles: bucles.md
-  - Bucle for: bucles/for.md
-  - Bucle while: bucles/while.md
+  - Bucles: 
+    - bucles/index.md
+    - Bucle for: bucles/for.md
+    - Bucle while: bucles/while.md
   - Listas: listas.md
   - Cadenas: cadenas.md
-  - Funciones: funciones.md
-  - Funciones básicas: funciones/func_base.md
-  - Funciones avanzadas: funciones/func_av.md
+  - Funciones:
+    - funciones/index.md 
+    - Funciones de usuario: funciones/func_base.md
+    - Parametrización: funciones/func_av.md
+  - Archivos: archivos.md
   - Objetos: objetos.md
-  - GUI: gui.md
-  - PySide6: pyside6.md
 
 theme:
   language: es
@@ -38,11 +39,14 @@ theme:
 
   features:
     - navigation.instant
-    - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
-    - content.tooltips
+    - navigation.sections
+    - navigation.tracking
     - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.indexes
 
 markdown_extensions:
   - pymdownx.highlight:

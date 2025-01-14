@@ -17,4 +17,4 @@ Las funciones deben ser **independientes**: todo objeto usado dentro de ellas ti
 
 ### Vamos a verlas en detalle:
 
-## Funciones [básicas](funciones/func_base.md) y [parametrización avanzada](funciones/func_av.md)
+## Funciones [básicas](func_base.md) y [parametrización avanzada](func_av.md)

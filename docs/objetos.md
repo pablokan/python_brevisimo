@@ -4,10 +4,10 @@ La **Programación Orientada a Objetos** (en español: **POO**, en inglés: **OO
 
 Las **clases** son plantillas, planos o, como me dijo un alumno hace algunos años en un examen, "una clase es una budinera, sirve para hacer budines pero no tengo ningún budín hasta que no hago uno".
 
-## Clase:
+## Clase
 ![clase](img/budinera.webp) 
 
-## Objeto:
+## Objeto
 ![objeto](img/flan.webp)
 
 Ejemplo #1:

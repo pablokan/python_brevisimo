@@ -1,7 +1,7 @@
-# Datos Básicos
+# Tipos de Datos Básicos
 
 ## str
-Todo lo que se escriba encerrado entre comillas (dobles o sencillas) es una cadena de caracteres, en inglés se les llama **strings** y su tipo de dato es **str** (ya hablaremos más de tipos de datos)
+Todo lo que se escriba encerrado entre comillas (dobles o sencillas) es una **cadena de caracteres**, en inglés se les llama **strings** y su tipo de dato es **str**.
 ```py
 "Esto es una cadena de caracteres"
 ```
@@ -15,6 +15,7 @@ Para mostrar el contenido de una string por la consola (el área de salida del p
 ```py
 # Copie y pegue en el editor. Ejecute.
 print("Este texto saldrá por la pantalla sin las comillas")
+print("") # Esta es una cadena vacía
 ```
 
 
@@ -28,3 +29,13 @@ print(3, 27000, 1.73, 0.8)
 ```
 
 Como acabamos de ver, la función **print()** puede mostrar varios datos (4 números en el ejemplo anterior). Iremos viendo gradualmente otras formas de mostrar información.
+
+## bool
+Valores lógicos (booleanos)
+
+```py
+# True (verdadero) y False (falso)
+# Muestro True 🐸, tendrá sentido cuando veamos variables 
+# y sobre todo alternativas!
+print(True) 
+```

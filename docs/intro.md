@@ -55,7 +55,7 @@ Si cerramos la ventana del archivo (NO la del editor), igualmente podemos abrir 
 
 
 ## Escribamos nuestro primer programa!
-Copiar y pegaren el editor:
+Copiar y pegar en el editor:
 
 ```py
    print("hola mundo")

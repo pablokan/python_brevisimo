@@ -29,7 +29,7 @@ para su ejecución directa:
 print("hola mundo!")
 ```
 
-En la esquina superior derecha tienen el **Símbolo de Copiar** para tener disponible todo el código Python dentro del área gris para luego ser pegado en el Editor (vía botón derecho, opción **Paste**/**Pegar** o con el teclado usando la combinación de teclas **Ctrl-V**)
+En la esquina superior derecha tienen el **Símbolo de Copiar al portapapeles**: ![](img/copy_symbol.png) para tener disponible todo el código Python dentro del área gris para luego ser pegado en el Editor (vía botón derecho, opción **Paste**/**Pegar** o con el teclado usando la combinación de teclas **Ctrl-V**)
 
 Tendremos enlaces internos (a otros documentos de este Apunte), como por ejemplo: [Introducción](intro.md), que también estarán en el Menú Superior o en el Panel Izquierdo. Las secciones de cada página las tendremos en el Panel Derecho.
 

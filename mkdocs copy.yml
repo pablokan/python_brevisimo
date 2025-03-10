@@ -5,8 +5,20 @@ nav:
   - Introducción: intro.md
   - Datos: datos.md
   - Variables: variables.md
-  - Operaciones: operaciones.md
-  
+  - Alternativa if: if.md
+  - Bucles: 
+    - bucles/index.md
+    - Bucle for: bucles/for.md
+    - Bucle while: bucles/while.md
+  - Listas: listas.md
+  - Cadenas: cadenas.md
+  - Funciones:
+    - funciones/index.md 
+    - Funciones de usuario: funciones/func_base.md
+    - Parametrización: funciones/func_av.md
+  - Archivos: archivos.md
+  - Objetos: objetos.md
+
 theme:
   language: es
   font:

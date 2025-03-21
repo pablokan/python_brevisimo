@@ -6,6 +6,7 @@ nav:
   - Datos: datos.md
   - Variables: variables.md
   - Operaciones: operaciones.md
+  - Alternativa: if.md
   
 theme:
   language: es

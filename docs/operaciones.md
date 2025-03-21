@@ -40,8 +40,8 @@ Es importante tener en cuenta que SIEMPRE, la función **input()**, toma el dato
 
 ```py
 edad = input("Ingrese su edad: ")
-print("El doble de tu edad es", edad * 2)
-# ups !
+print("El doble de tu edad es", edad * 2) # ups !
+# claro! input toma string, NO multiplicó
 # olvidé convertir a entero, ahora va:
 edad = int(edad)
 # pruebo de nuevo:

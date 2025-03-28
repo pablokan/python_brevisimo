@@ -7,6 +7,10 @@ nav:
   - Variables: variables.md
   - Operaciones: operaciones.md
   - Alternativa: if.md
+  - Bucles: 
+    - bucles/index.md
+    - Bucle for: bucles/for.md
+    - Bucle while: bucles/while.md
   
 theme:
   language: es

@@ -12,6 +12,7 @@ nav:
     - Bucle for: bucles/for.md
     - Bucle while: bucles/while.md
   - Listas: listas.md
+  - Cadenas(Strings): cadenas.md
   
 theme:
   language: es

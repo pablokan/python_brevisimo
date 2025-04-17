@@ -13,7 +13,8 @@ nav:
     - Bucle while: bucles/while.md
   - Listas: listas.md
   - Cadenas(Strings): cadenas.md
-  
+  - Diccionarios: diccionarios.md
+
 theme:
   language: es
   font:

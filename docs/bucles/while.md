@@ -53,10 +53,13 @@ acumulador_cajas = 0
 respuesta = 's'
 while respuesta == 's':
     contador_envios = contador_envios + 1
+    # la línea anterior se puede escribir también asi: contador_envios += 1
     print(f'Envío #{contador_envios}')
     cantidad_cajas = input('Cuántas cajas llegaron? ')
     cantidad_cajas = int(cantidad_cajas)
     acumulador_cajas = acumulador_cajas + cantidad_cajas
+    # igual que el contador, también se puede escribir asi: 
+    # acumulador_cajas += cantidad_cajas
     respuesta = input('LLegaron más cajas? (s/n): ')
 
 print(f'En {contador_envios} envíos fueron recibidas {acumulador_cajas} cajas')

@@ -14,6 +14,9 @@ nav:
   - Listas: listas.md
   - Cadenas(Strings): cadenas.md
   - Diccionarios: diccionarios.md
+  - Funciones:
+    - funciones/index.md 
+    - Funciones de usuario: funciones/func_base.md
 
 theme:
   language: es

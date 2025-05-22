@@ -117,8 +117,8 @@ def doble(numero):
 
 print(doble(3))
 print(f'El doble del doble es {doble(4) * 2}')
-dobleDe9 = doble(9)
-print(dobleDe9)
+doble_de_9 = doble(9)
+print(doble_de_9)
 ```
 
 ---

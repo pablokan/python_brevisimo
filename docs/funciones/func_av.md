@@ -1,12 +1,13 @@
 # Funciones con parametrización avanzada
 
-## Orden recomendado: 
+## Orden recomendado
+
 1. **Posicionales individuales**. Parámetro posicional <-> Argumento posicional obligatorio
 2. ***args**. Tupla de tamaño indeterminado de posicionales. No tiene argumentos obligatorios. Positional-only
 3. **Pares clave-valor o con valor por defecto individuales**. Parámetro con valor por defecto <-> Argumento opcional
 4. ****kwargs**. Diccionario de tamaño indeterminado de pares clave-valor. No tiene argumentos obligatorios. Keyword-only
 
-#### variantes individuales exclusivas (positional-only y keyword-only). Dependen de los seudo-parámetros / y *
+variantes individuales exclusivas (positional-only y keyword-only). Dependen de los seudo-parámetros / y *
 
 ```py
 def foo1(a, b, *args, n1="ene uno", **kwargs):

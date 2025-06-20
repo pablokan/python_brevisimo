@@ -18,6 +18,7 @@ nav:
     - funciones/index.md 
     - Funciones de usuario: funciones/func_base.md
     - Parametrización: funciones/func_av.md
+  - Archivos: archivos.md
 
 theme:
   language: es

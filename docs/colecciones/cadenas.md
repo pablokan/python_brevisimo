@@ -17,9 +17,9 @@ nueva_cadena = una_cadena + " - " + otra_cadena
 print(nueva_cadena)
 ```
 
-Las strings se pueden pensar como valores comunes (un solo dato) pero también pueden ser tratadas como listas.
+Las strings se pueden pensar como valores comunes (un solo dato) pero también pueden ser tratadas como listas (o más apropiadamente como tuplas de caracteres -por ser también inmutables-)
 
-Por lo tanto, al igual que las listas, se pueden recorrer fácilmente con el [for](bucles/for.md)
+Por lo tanto, al igual que las listas, se pueden recorrer fácilmente con el [for](../bucles/for.md)
 
 ## Recorrer (como lista)
 

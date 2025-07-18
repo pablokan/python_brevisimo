@@ -1,9 +1,11 @@
-# Comienzo rápido!
+# Comienzo rápido
 
 ## Estructura de carpetas (Árbol de directorios)
+
 En Linux, oprimiendo la tecla Windows (en Linux le decimos SUPER) podemos acceder a todas las aplicaciones. Si hemos instalado Linux Mint, además tendremos un panel inferior donde veremos varias aplicaciones entre ellas el Explorador de Archivos y la Terminal.
+
 <figure markdown="span">
-  ![Panel Principal](img/main_panel.png){ width="200" }
+  ![Panel Principal](../img/main_panel.png){ width="200" }
   <figcaption>Panel Principal</figcaption>
 </figure>
 Cuando abrimos el Explorador de Archivos (Files) o bien ejecutamos una *terminal* (también llamada *consola*), nos encontramos parados en nuestro directorio (o carpeta) base.
@@ -12,12 +14,12 @@ Para cada usuario, su directorio base será */home/nombre_usuario*.
 En mi caso será **/home/kan/** (ese soy yo), y si vos sos Ana será **/home/ana/** y si sos Pedro será **/home/pedro/**
 
 <figure markdown="span">
-  ![Explorador de Archivos](img/home_dir.png){ width="550" }
+  ![Explorador de Archivos](../img/home_dir.png){ width="550" }
   <figcaption>Explorador de Archivos</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Terminal](img/home_dir_terminal.png){ width="550" }
+  ![Terminal](../img/home_dir_terminal.png){ width="550" }
   <figcaption>Terminal</figcaption>
 </figure>
 
@@ -71,7 +73,7 @@ Si todo está bien debería producirse la siguiente salida:
 
 **hola mundo**
 
-![](img/exec_hola_mundo.png)
+![](../img/exec_hola_mundo.png)
 
 Hemos ejecutado el programa usando el intérprete **python3** y utilizamos nuestra primera **función**.
 

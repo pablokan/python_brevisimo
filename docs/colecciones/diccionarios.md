@@ -2,7 +2,7 @@
 
 ---
 
-Un diccionario es una variable de almacenamiento múltiple como una [lista](listas.md), una estructura de datos que sirve para guardar varios datos simultáneamente. Pero, a diferencia de una lista, cada elemento es un par **clave: valor**. Por ejemplo, el siguiente diccionario tiene dos elementos, que al igual que en una lista, se separan con una coma.
+Un diccionario es una variable de almacenamiento múltiple como una [lista](../listas.md), una estructura de datos que sirve para guardar varios datos simultáneamente. Pero, a diferencia de una lista, cada elemento es un par **clave: valor**. Por ejemplo, el siguiente diccionario tiene dos elementos, que al igual que en una lista, se separan con una coma.
 
 ```py
 dicci = {'primero': 1, 'último': 'two'}

@@ -1,58 +1,54 @@
-# Objetos
+# Orientación a Objetos
 
-La **Programación Orientada a Objetos** (en español: **POO**, en inglés: **OOP**) consiste en la declaración de Clases que permiten tener en una sola estructura, el **objeto** o **instancia**, tanto datos, como acciones sobre esos datos.  
+La **Programación Orientada a Objetos** (en español: **POO**, en inglés: **OOP**) es un paradigma (forma de organización del código) de programación que surgió con el objetivo de mejorar la modelización de la realidad. Se trató de eliminar algunos supuestos defectos del paradigma de la **Programación Estructurada**.
 
-Las **clases** son plantillas, planos o, como me dijo un alumno hace algunos años en un examen, "una clase es una budinera, sirve para hacer budines pero no tengo ningún budín hasta que no hago uno".
+## Objetivos
+
+- Mayor consistencia: al poner datos y operaciones sobre sobre los mismos dentro de la misma estructura, se reduce el riesgo de desajustes.
+- Mejor reutilización: a partir de la **Herencia**
+- Simplificación: **Abstracción** (importa QUÉ hace y no CÓMO)
+- Seguridad: Acceso más controlado a los datos (**Encapsulamiento**)
+- Sencillez: el **Polimorfismo** nos da interfases comunes para objetos diversos.
+
+## Terminología
+
+- Clase: Las **clases** son moldes, plantillas, planos o, como me dijo un alumno hace algunos años en un examen, "una clase es una budinera, sirve para hacer budines pero no tengo ningún budín hasta que no hago uno".
+- Instancia: el objeto propiamente dicho (un budín!)
+- Atributo: Características o propiedades de un objeto.
+- Método: Acciones o comportamientos de un objeto.
 
 ## Clase
+
 ![clase](img/budinera.webp) 
 
 ## Objeto
+
 ![objeto](img/flan.webp)
 
+## Nomenclatura
+
+En Python, la nomenclatura de clases sigue la convención de usar PascalCase, donde la primera letra de cada palabra en el nombre de la clase se escribe en mayúscula. Además, es recomendable que los nombres de clase sean sustantivos singulares.
+Ejemplos: Usuario, Producto, Coche, GatoDomestico.
+
 Ejemplo #1:
-```py
-class Gato:
-    especie = "Felis silvestris catus" # atributo de clase: aplica a todos los objetos que se crean
-    def __init__(self, n): # el self representa a cada objeto que se creará
-        self.nombre = n # atributo de instancia u objeto
 
-gatito = Gato("Kitty")
-print("El gatito se llama", gatito.nombre) 
-# el nombre del objeto reemplaza al self 
-# que pusimos en la declaración de la clase, 
-# luego se coloca un punto y finalmente el nombre del atributo.
+```py
+class Alumno:
+    def __init__(self, nombre, apellido): # método constructor
+        self.nombre = nombre # self.nombre es el atributo
+        self.apellido = apellido
+        self.mail = f'{nombre[0].lower()}.{apellido.lower()}@itecriocuarto.org.ar'
+
+    def nombre_completo(self):
+        return f'{self.nombre} {self.apellido}'
+    
+    def promedio(self, *args):
+        return sum(args) / len(args)
+
+alumno1 = Alumno('Juan', 'Torres') # instanciación (creación del objeto)
+print(f'El alumno {alumno1.nombre_completo()} tiene este mail: {alumno1.mail}')
+print(f'Y su promedio es {alumno1.promedio(4,5,7)}')
+
 ```
 
-Ejemplo #2:
-```py
-class Persona:
-    def __init__(self, n, e): # constructor: inicializa los atributos
-        self.nombre = n # atributo: variable que representa una característica del objeto
-        self.edad = e # otro atributo
-
-    def saludo(self): # el self representa al objeto que se va a crear
-        return  "Hola " + self.nombre + " tenés " + str(self.edad) + " años."
-
-    def adulto(self): # las funciones dentro de los objetos se llaman métodos
-        if self.edad >= 18:
-            return True
-        else:
-            return False
-
-    def esAdulto(self):
-        if self.adulto():
-            return "si, es adulto"
-        else:
-            return "no, aún no es adulto"
-
-pibe = Persona("José", 13) # creación del objeto o instancia
-profesora = Persona("Ana", 35) # otra instanciación
-bebito = Persona("Benjamín", 1) # los argumentos se reciben en los parámetros del constructor
-
-print(profesora.saludo()) # los métodos siempre llevan paréntesis
-print("Es adulto?", pibe.esAdulto()) # este método devuelve una variable booleana
-print("El bebé se llama", bebito.nombre) # muestra el atributo directamente
-```
-Observen que el objeto reemplaza a self en los atributos y en los métodos. Siempre va el nombre del objeto, un punto y finalmente el nombre del atributo o método.
-
+Observen que el objeto reemplaza a self en los atributos y en los métodos. Siempre va el nombre del objeto, un punto y finalmente el nombre del atributo o método (este siempre lleva paréntesis).

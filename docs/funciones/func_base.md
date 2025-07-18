@@ -5,7 +5,7 @@ def raya():
     print("----------------------------")
 ```
 
-Una función debe declararse con la palabra reservada **def**, luego un nombre (mismo criterio de nombrado que las [variables](../variables.md#como-se-puede-llamar-una-variable)), y luego el bloque de código que pertenece a la función (son todas las líneas que estén indentadas).
+Una función debe declararse con la palabra reservada **def**, luego un nombre (mismo criterio de nombrado que las [variables](../inicio/variables.md#como-se-puede-llamar-una-variable)), y luego el bloque de código que pertenece a la función (son todas las líneas que estén indentadas).
 
 ```py
 # función como procedimiento

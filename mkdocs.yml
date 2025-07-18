@@ -2,24 +2,30 @@ site_name: Python Brevísimo
 
 nav:
   - Principal: index.md
-  - Introducción: intro.md
-  - Datos: datos.md
-  - Variables: variables.md
-  - Operaciones: operaciones.md
-  - Alternativa: if.md
-  - Bucles: 
-    - bucles/index.md
-    - Bucle for: bucles/for.md
-    - Bucle while: bucles/while.md
-  - Listas: listas.md
-  - Cadenas(Strings): cadenas.md
-  - Diccionarios: diccionarios.md
+  - Inicio:
+    - inicio/index.md
+    - Datos: inicio/datos.md
+    - Variables: inicio/variables.md
+    - Operaciones: inicio/operaciones.md
+  - Flujos de Ejecución:
+    - flujos/index.md
+    - Alternativa: flujos/if.md
+    - Bucles: 
+      - flujos/bucles/index.md
+      - Bucle for: flujos/bucles/for.md
+      - Bucle while: flujos/bucles/while.md
+  - Estructuras de Datos:
+    - colecciones/index.md
+    - Listas: colecciones/listas.md
+    - Cadenas(Strings): colecciones/cadenas.md
+    - Diccionarios: colecciones/diccionarios.md
   - Funciones:
     - funciones/index.md 
     - Funciones de usuario: funciones/func_base.md
     - Parametrización: funciones/func_av.md
   - Archivos: archivos.md
-
+  - Objetos: objetos.md
+  
 theme:
   language: es
   font:

@@ -7,23 +7,25 @@ La **Programación Orientada a Objetos** (en español: **POO**, en inglés: **OO
 - Mayor consistencia: al poner datos y operaciones sobre sobre los mismos dentro de la misma estructura, se reduce el riesgo de desajustes.
 - Mejor reutilización: a partir de la **Herencia**
 - Simplificación: **Abstracción** (importa QUÉ hace y no CÓMO)
-- Seguridad: Acceso más controlado a los datos (**Encapsulamiento**)
+- Seguridad y validación: Acceso más controlado a los datos (**Encapsulamiento**)
 - Sencillez: el **Polimorfismo** nos da interfases comunes para objetos diversos.
+- Menor acoplamiento: Mejorar la relación entre componentes (**Composición**)
 
 ## Terminología
 
 - Clase: Las **clases** son moldes, plantillas, planos o, como me dijo un alumno hace algunos años en un examen, "una clase es una budinera, sirve para hacer budines pero no tengo ningún budín hasta que no hago uno".
-- Instancia: el objeto propiamente dicho (un budín!)
-- Atributo: Características o propiedades de un objeto.
-- Método: Acciones o comportamientos de un objeto.
+- Instancia: el **objeto** propiamente dicho (un budín!)
+- Miembros de la clase
+    - Atributo: Características o propiedades de un objeto.
+    - Método: Acciones o comportamientos de un objeto.
 
 ## Clase
 
-![clase](img/budinera.webp) 
+![clase](../img/budinera.webp) 
 
 ## Objeto
 
-![objeto](img/flan.webp)
+![objeto](../img/flan.webp)
 
 ## Nomenclatura
 

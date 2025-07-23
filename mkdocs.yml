@@ -24,7 +24,9 @@ nav:
     - Funciones de usuario: funciones/func_base.md
     - Parametrización: funciones/func_av.md
   - Archivos: archivos.md
-  - Objetos: objetos.md
+  - Objetos: 
+    - objetos/index.md
+    - Encapsulamiento: objetos/encapsulamiento.md
   
 theme:
   language: es

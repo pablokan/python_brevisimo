@@ -1,0 +1,11 @@
+{
+	"Python Code": {
+	 	"prefix": "pyc",
+	 	"body": [
+	 		"``` py",
+			"$0",
+			"```"
+		],
+	 	"description": "Fragmento de código Python"
+	}
+}

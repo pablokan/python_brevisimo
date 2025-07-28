@@ -113,3 +113,10 @@ print(f'⦃ {persona.edad=} ⦄') # este es el GETTER
 print(f'⦃ {persona._edad=} ⦄') # este es el atributo VERDADERO
 
 ```
+!!! note "Nomenclatura de atributos"
+    Por convención, los atributos se muestran como "privados" al colocar uno o dos guiones bajos al comienzo de sus nombres.
+
+    Ejemplo: **_nombre** o **__nombre**
+
+    De cualquier manera, siempre pueden ser accedidos directamente ya que Python no tiene atributos REALMENTE inaccesibles.
+    La diferencia entre ambos existe en la forma de acceso directo, pero es una decisión de nomenclatura y no cambia demasiado. Se los llama de varios modos (privacidad débil y fuerte, por ejemplo) pero elijan libremente cual usar.

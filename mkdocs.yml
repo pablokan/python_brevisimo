@@ -27,6 +27,7 @@ nav:
   - Objetos: 
     - objetos/index.md
     - Encapsulamiento: objetos/encapsulamiento.md
+    - Métodos Mágicos (dunders): objetos/dunders.md
   
 theme:
   language: es

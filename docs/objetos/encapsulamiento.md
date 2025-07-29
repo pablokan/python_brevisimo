@@ -1,3 +1,3 @@
 # **Encapsulamiento**
 
-Estará disponible para el siguiente módulo!
+Estará disponible para el módulo 11!

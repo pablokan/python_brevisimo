@@ -5,6 +5,8 @@ Los atributos y métodos de clase son aquellos que aplican a la totalidad de las
 Por ejemplo, si tenemos una clase **GatoDomestico**, cada instancia (cada objeto gato que se cree), podrá tener su atributo nombre específico, su edad, su comportamiento, etc.
 Pero todos ellos serán de la **especie Felis Catus**, por lo tanto, **especie** será un atributo de clase, en lugar de ser un atributo de instancia.
 
+A diferencia de los miembros de instancia, en lugar de usar solamente **self**, se utiliza **cls** para hacer referencia específica a la clase. Aunque con self también se puede acceder desde una instancia a un atributo de clase.
+
 ``` py
 # atributos y métodos de clases
 class Persona:

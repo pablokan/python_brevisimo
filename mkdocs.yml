@@ -29,6 +29,7 @@ nav:
     - Encapsulamiento: objetos/encapsulamiento.md
     - Métodos Mágicos (dunders): objetos/dunders.md
     - Miembros de Clase: objetos/class_members.md
+    - Herencia: objetos/herencia.md
   
 theme:
   language: es

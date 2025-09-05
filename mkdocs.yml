@@ -30,6 +30,7 @@ nav:
     - Métodos Mágicos (dunders): objetos/dunders.md
     - Miembros de Clase: objetos/class_members.md
     - Herencia: objetos/herencia.md
+    - Polimorfismo: objetos/polimorfismo.md
   
 theme:
   language: es

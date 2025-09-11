@@ -31,6 +31,7 @@ nav:
     - Miembros de Clase: objetos/class_members.md
     - Herencia: objetos/herencia.md
     - Polimorfismo: objetos/polimorfismo.md
+    - Composición: objetos/composicion.md
   
 theme:
   language: es

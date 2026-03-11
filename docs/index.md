@@ -5,7 +5,7 @@
 documentación escrita por: 
 *kan / Pablo Kaniefsky*
 / email: pablokan@itecriocuarto.org.ar
-(actualizado 2025)
+(actualizado 2026)
 ___
 
 Este ~~es~~ fue un apunte de Python nivel introductorio agnóstico al sistema operativo (utilizo en esta materia, de manera indistinta, equipos con Linux, MacOS, ChromeOS y ~~Windows~~ ningún otro).

@@ -7,6 +7,31 @@ nav:
     - Datos: inicio/datos.md
     - Variables: inicio/variables.md
     - Operaciones: inicio/operaciones.md
+  - Flujos de Ejecución:
+    - flujos/index.md
+    - Alternativa: flujos/if.md
+    - Bucles: 
+      - flujos/bucles/index.md
+      - Bucle for: flujos/bucles/for.md
+      - Bucle while: flujos/bucles/while.md
+  - Estructuras de Datos:
+    - colecciones/index.md
+    - Listas: colecciones/listas.md
+    - Cadenas(Strings): colecciones/cadenas.md
+    - Diccionarios: colecciones/diccionarios.md
+  - Funciones:
+    - funciones/index.md 
+    - Funciones de usuario: funciones/func_base.md
+    - Parametrización: funciones/func_av.md
+  - Archivos: archivos.md
+  - Objetos: 
+    - objetos/index.md
+    - Encapsulamiento: objetos/encapsulamiento.md
+    - Métodos Mágicos (dunders): objetos/dunders.md
+    - Miembros de Clase: objetos/class_members.md
+    - Herencia: objetos/herencia.md
+    - Polimorfismo: objetos/polimorfismo.md
+    - Composición: objetos/composicion.md
   
 theme:
   language: es
@@ -49,7 +74,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.tilde
   - md_in_html
-   
- 
+      
+  
 extra_css:
   - css/extra.css

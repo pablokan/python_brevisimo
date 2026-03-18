@@ -1,0 +1,325 @@
+import process from 'node:process';
+import path from 'node:path';
+import {taskkill} from 'taskkill';
+import {execa} from 'execa';
+import {portToPid} from 'pid-port';
+import {processExistsMultiple, filterExistingProcesses} from 'process-exists';
+import psList from 'ps-list';
+
+// If we check too soon, we're unlikely to see process killed so we essentially wait 3*ALIVE_CHECK_MIN_INTERVAL before the second check while producing unnecessary load.
+// Primitive tests show that for a process which just dies on kill on a system without much load, we can usually see the process die in 5 ms.
+// Checking once a second creates low enough load to not bother increasing maximum interval further, 1280 as first x to satisfy 2^^x * ALIVE_CHECK_MIN_INTERVAL > 1000.
+const ALIVE_CHECK_MIN_INTERVAL = 5;
+const ALIVE_CHECK_MAX_INTERVAL = 1280;
+
+const TASKKILL_EXIT_CODE_FOR_PROCESS_FILTERING_SIGTERM = 255;
+const DEFAULT_PATHEXT = '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC';
+
+const delay = ms => new Promise(resolve => {
+	setTimeout(resolve, ms);
+});
+
+const missingBinaryError = async (command, arguments_) => {
+	try {
+		return await execa(command, arguments_);
+	} catch (error) {
+		if (error.code === 'ENOENT') {
+			const newError = new Error(`\`${command}\` doesn't seem to be installed and is required by fkill`);
+			newError.sourceError = error;
+			throw newError;
+		}
+
+		throw error;
+	}
+};
+
+const windowsKill = async (input, options) => {
+	const killOptions = {
+		force: options.force,
+		tree: options.tree === undefined ? true : options.tree,
+	};
+
+	const attemptKill = async target => {
+		try {
+			return await taskkill(target, killOptions);
+		} catch (error) {
+			if (error.exitCode === TASKKILL_EXIT_CODE_FOR_PROCESS_FILTERING_SIGTERM && !options.force) {
+				return;
+			}
+
+			throw error;
+		}
+	};
+
+	// If it's a PID, proceed normally
+	if (typeof input === 'number') {
+		return attemptKill(input);
+	}
+
+	// Normalize PATHEXT to uppercase for consistent comparison
+	// Filter out empty entries and trim whitespace to handle malformed PATHEXT
+	const pathext = (process.env.PATHEXT || DEFAULT_PATHEXT)
+		.toUpperCase()
+		.split(';')
+		.map(ext => ext.trim())
+		.filter(Boolean);
+
+	const inputExtension = path.extname(input).toUpperCase();
+
+	// If input has a known executable extension, use it directly
+	if (inputExtension && pathext.includes(inputExtension)) {
+		return attemptKill(input);
+	}
+
+	// Guard against empty input
+	if (!input) {
+		throw new Error('Process name cannot be empty');
+	}
+
+	// No executable extension - try to find the actual process name
+	try {
+		const {stdout} = await execa('tasklist', ['/fo', 'csv', '/nh']);
+		const inputLower = input.toLowerCase();
+
+		// Parse CSV output to get process names
+		const processes = stdout.trim().split('\n')
+			.filter(Boolean)
+			.map(line => {
+				const match = line.match(/^"([^"]+)"/);
+				return match ? {imageName: match[1]} : null;
+			})
+			.filter(Boolean);
+
+		// Find processes matching: input + dot + extension
+		const matches = processes.filter(proc =>
+			proc.imageName.toLowerCase().startsWith(inputLower + '.'));
+
+		if (matches.length > 0) {
+			// Find the best match by PATHEXT priority
+			let bestMatch = matches[0];
+			let bestPriority = pathext.indexOf(path.extname(bestMatch.imageName).toUpperCase());
+
+			for (const proc of matches.slice(1)) {
+				const priority = pathext.indexOf(path.extname(proc.imageName).toUpperCase());
+
+				// Prefer processes with extensions in PATHEXT, prioritized by order
+				if (priority !== -1 && (bestPriority === -1 || priority < bestPriority)) {
+					bestMatch = proc;
+					bestPriority = priority;
+				}
+			}
+
+			return attemptKill(bestMatch.imageName);
+		}
+	} catch {
+		// If tasklist fails, fall through to .exe fallback
+	}
+
+	// Fallback: try with .exe extension
+	return attemptKill(`${input}.exe`);
+};
+
+const macosKill = (input, options) => {
+	const killByName = typeof input === 'string';
+	const command = killByName ? 'pkill' : 'kill';
+
+	// Use '--' to separate options from PID to handle negative PIDs (process groups) correctly.
+	const arguments_ = killByName ? [input] : ['--', input];
+
+	if (killByName && options.ignoreCase) {
+		arguments_.unshift('-i');
+	}
+
+	if (killByName) {
+		arguments_.unshift('-x');
+	}
+
+	// Must be first for `kill` command.
+	// Explicit signal is required to handle negative PIDs (process groups) correctly.
+	// Without it, `kill -1234` is ambiguous (could be interpreted as signal 1234).
+	if (options.force) {
+		arguments_.unshift(killByName ? '-KILL' : '-9');
+	} else {
+		arguments_.unshift(killByName ? '-TERM' : '-15');
+	}
+
+	return missingBinaryError(command, arguments_);
+};
+
+const defaultKill = (input, options) => {
+	const killByName = typeof input === 'string';
+	const command = killByName ? 'killall' : 'kill';
+
+	// Use '--' to separate options from PID to handle negative PIDs (process groups) correctly.
+	const arguments_ = killByName ? [input] : ['--', input];
+
+	// Explicit signal is required to handle negative PIDs (process groups) correctly.
+	// Without it, `kill -1234` is ambiguous (could be interpreted as signal 1234).
+	arguments_.unshift(options.force ? '-9' : '-15');
+
+	if (killByName && options.ignoreCase) {
+		arguments_.unshift('-I');
+	}
+
+	return missingBinaryError(command, arguments_);
+};
+
+const kill = (() => {
+	if (process.platform === 'darwin') {
+		return macosKill;
+	}
+
+	if (process.platform === 'win32') {
+		return windowsKill;
+	}
+
+	return defaultKill;
+})();
+
+const parseInput = async input => {
+	if (typeof input === 'string' && input[0] === ':') {
+		return portToPid({port: Number.parseInt(input.slice(1), 10), host: '*'});
+	}
+
+	return input;
+};
+
+const getCurrentProcessParentsPID = processes => {
+	const processMap = new Map(processes.map(ps => [ps.pid, ps.ppid]));
+	const pids = [];
+	let currentId = process.pid;
+	while (currentId) {
+		pids.push(currentId);
+		currentId = processMap.get(currentId);
+	}
+
+	return pids;
+};
+
+const waitForProcessExit = async (parsedInputsMap, timeout, silent) => {
+	const endTime = Date.now() + timeout;
+	let interval = ALIVE_CHECK_MIN_INTERVAL;
+	if (interval > timeout) {
+		interval = timeout;
+	}
+
+	let alive = [...parsedInputsMap.values()];
+
+	do {
+		await delay(interval); // eslint-disable-line no-await-in-loop
+
+		alive = await filterExistingProcesses(alive); // eslint-disable-line no-await-in-loop
+
+		interval *= 2;
+		if (interval > ALIVE_CHECK_MAX_INTERVAL) {
+			interval = ALIVE_CHECK_MAX_INTERVAL;
+		}
+	} while (Date.now() < endTime && alive.length > 0);
+
+	if (alive.length > 0 && !silent) {
+		const waitErrors = [];
+		for (const parsedInput of alive) {
+			// Find the original input that matches this parsedInput
+			const originalInput = [...parsedInputsMap.entries()].find(([, value]) => value === parsedInput)?.[0] ?? parsedInput;
+			waitErrors.push(`Process ${originalInput} did not exit within ${timeout}ms`);
+		}
+
+		throw new AggregateError(waitErrors, 'Processes did not exit within timeout');
+	}
+};
+
+const killWithLimits = async (input, options) => {
+	input = await parseInput(input);
+
+	if (input === process.pid) {
+		return;
+	}
+
+	if (input === 'node' || input === 'node.exe') {
+		const processes = await psList();
+		const pids = getCurrentProcessParentsPID(processes);
+		await Promise.all(processes.map(async ps => {
+			if ((ps.name === 'node' || ps.name === 'node.exe') && !pids.includes(ps.pid)) {
+				await kill(ps.pid, options);
+			}
+		}));
+		return;
+	}
+
+	await kill(input, options);
+};
+
+export default async function fkill(inputs, options = {}) {
+	inputs = [inputs].flat();
+
+	// Parse ports to PIDs upfront for correct existence checking.
+	const parsedInputsMap = new Map(await Promise.all(inputs.map(async input => {
+		try {
+			return [input, await parseInput(input)];
+		} catch {
+			// If parsing fails (e.g., port has no process), keep original input.
+			return [input, input];
+		}
+	})));
+
+	const exists = await processExistsMultiple([...parsedInputsMap.values()]);
+
+	const errors = [];
+
+	const handleKill = async input => {
+		const parsedInput = parsedInputsMap.get(input);
+
+		try {
+			await killWithLimits(input, options);
+		} catch (error) {
+			if (!exists.get(parsedInput)) {
+				errors.push(`Killing process ${input} failed: Process doesn't exist`);
+				return;
+			}
+
+			errors.push(`Killing process ${input} failed: ${error.message.replace(/.*\n/, '').replace(/kill: \d+: /, '').trim()}`);
+		}
+	};
+
+	await Promise.all(inputs.map(input => handleKill(input)));
+
+	if (errors.length > 0 && !options.silent) {
+		throw new AggregateError(errors, 'Failed to kill processes');
+	}
+
+	if (options.forceAfterTimeout !== undefined && !options.force) {
+		const endTime = Date.now() + options.forceAfterTimeout;
+		let interval = ALIVE_CHECK_MIN_INTERVAL;
+		if (interval > options.forceAfterTimeout) {
+			interval = options.forceAfterTimeout;
+		}
+
+		let alive = [...parsedInputsMap.values()];
+
+		do {
+			await delay(interval); // eslint-disable-line no-await-in-loop
+
+			alive = await filterExistingProcesses(alive); // eslint-disable-line no-await-in-loop
+
+			interval *= 2;
+			if (interval > ALIVE_CHECK_MAX_INTERVAL) {
+				interval = ALIVE_CHECK_MAX_INTERVAL;
+			}
+		} while (Date.now() < endTime && alive.length > 0);
+
+		if (alive.length > 0) {
+			await Promise.all(alive.map(async parsedInput => {
+				try {
+					await killWithLimits(parsedInput, {...options, force: true});
+				} catch {
+					// It's hard to filter does-not-exist kind of errors, so we ignore all of them here.
+					// All meaningful errors should have been thrown before this operation takes place.
+				}
+			}));
+		}
+	}
+
+	if (options.waitForExit !== undefined && options.waitForExit > 0) {
+		await waitForProcessExit(parsedInputsMap, options.waitForExit, options.silent);
+	}
+}

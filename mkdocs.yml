@@ -7,7 +7,10 @@ nav:
     - Datos: inicio/datos.md
     - Variables: inicio/variables.md
     - Operaciones: inicio/operaciones.md
-  
+  - Flujos de Ejecución:
+    - flujos/index.md
+    - Alternativa: flujos/if.md
+
 theme:
   language: es
   font:

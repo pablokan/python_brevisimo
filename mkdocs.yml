@@ -10,6 +10,10 @@ nav:
   - Flujos de Ejecución:
     - flujos/index.md
     - Alternativa: flujos/if.md
+    - Bucles: 
+      - flujos/bucles/index.md
+      - Bucle for: flujos/bucles/for.md
+      - Bucle while: flujos/bucles/while.md
 
 theme:
   language: es

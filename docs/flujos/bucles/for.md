@@ -119,7 +119,9 @@ for i in range(1, 6):
 print(f"La suma total es: {suma_total}")
 
 ```
-Nota importante: Siempre debés inicializar estas variables antes de que comience el bucle for. Si las declarás dentro del for, su valor se reseteará en cada iteración y perderás el seguimiento del cálculo.
+
+!!! note "Nota"
+    Siempre debés inicializar estas variables antes de que comience el bucle **for**. Si las declarás dentro del **for**, su valor se reseteará en cada iteración y perderás el seguimiento del cálculo.
 
 ## Recorrido por elemento
 

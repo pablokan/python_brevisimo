@@ -88,7 +88,8 @@ for i in range(vi-15, vf*2//3):
 
 En programación, tanto el contador como el acumulador son variables que actualizan su valor en cada iteración de un bucle, pero cumplen funciones distintas.
 
-1. Contador
+### Contador
+
 Un contador se utiliza para registrar cuántas veces ocurre un evento. Generalmente se incrementa en una cantidad constante (habitualmente 1).
 
 Ejemplo: Contar números pares entre 1 y 10
@@ -104,7 +105,8 @@ for i in range(1, 11):
 print(f"Se encontraron {contador_pares} números pares.")
 ```
 
-2. Acumulador
+### Acumulador
+
 Un acumulador se utiliza para reunir un total (una suma, un producto, etc.). A diferencia del contador, el valor que se le suma suele ser variable (el valor de la iteración actual u otra variable).
 
 Ejemplo: Sumar todos los números del 1 al 5

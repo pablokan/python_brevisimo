@@ -14,6 +14,9 @@ nav:
       - flujos/bucles/index.md
       - Bucle for: flujos/bucles/for.md
       - Bucle while: flujos/bucles/while.md
+  - Estructuras de Datos:
+    - colecciones/index.md
+    - Listas: colecciones/listas.md
 
 theme:
   language: es

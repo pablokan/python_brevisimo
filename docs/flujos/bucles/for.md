@@ -84,6 +84,44 @@ for i in range(vi-15, vf*2//3):
 !!! note "Importante!"
     Prueben estos fragmento de código y experimenten modificando los valores!
 
+## Contadores y Acumuladores
+
+En programación, tanto el contador como el acumulador son variables que actualizan su valor en cada iteración de un bucle, pero cumplen funciones distintas.
+
+1. Contador
+Un contador se utiliza para registrar cuántas veces ocurre un evento. Generalmente se incrementa en una cantidad constante (habitualmente 1).
+
+Ejemplo: Contar números pares entre 1 y 10
+
+``` py
+# Inicialización
+contador_pares = 0
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        contador_pares += 1  # Equivale a: contador_pares = contador_pares + 1
+
+print(f"Se encontraron {contador_pares} números pares.")
+```
+
+2. Acumulador
+Un acumulador se utiliza para reunir un total (una suma, un producto, etc.). A diferencia del contador, el valor que se le suma suele ser variable (el valor de la iteración actual u otra variable).
+
+Ejemplo: Sumar todos los números del 1 al 5
+
+``` py
+# Inicialización
+suma_total = 0
+
+for i in range(1, 6):
+    suma_total += i  # El valor sumado (i) cambia en cada vuelta
+
+print(f"La suma total es: {suma_total}")
+
+```
+Nota importante: Siempre debés inicializar estas variables antes de que comience el bucle for. Si las declarás dentro del for, su valor se reseteará en cada iteración y perderás el seguimiento del cálculo.
+
 ## Recorrido por elemento
-Para seguir aprendiendo sobre el bucle **for**, seguimos en **Listas** (próximamente)
+
+Para seguir aprendiendo sobre el bucle **for**, seguimos en **Listas**
 

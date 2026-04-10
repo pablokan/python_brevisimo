@@ -4,6 +4,8 @@
 
 Las cadenas (strings, tipo de dato **str**) son variables o constantes (literales) muy potentes.
 
+No son estrictamente estructuras de datos pero a mí me gusta pensarlas también como tales.
+
 Primero lo más simple, recuerdan cuando en las primeras clases quisimos sumar dos números, por ejemplo 2 y 3, y el resultado en lugar de 5 fue 23?
 Eso ocurrió porque, como sabemos, la función **input** toma siempre string y en lugar de sumar, lo que hicimos fue concatenar:
 

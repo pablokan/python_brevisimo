@@ -17,7 +17,11 @@ nav:
   - Estructuras de Datos:
     - colecciones/index.md
     - Listas: colecciones/listas.md
-
+  - Estructuras de Datos:
+    - colecciones/index.md
+    - Listas: colecciones/listas.md
+    - Cadenas(Strings): colecciones/cadenas.md
+    
 theme:
   language: es
   font:

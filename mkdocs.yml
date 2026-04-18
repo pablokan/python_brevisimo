@@ -21,7 +21,7 @@ nav:
     - colecciones/index.md
     - Listas: colecciones/listas.md
     - Cadenas(Strings): colecciones/cadenas.md
-    
+    - Diccionarios: colecciones/diccionarios.md    
 theme:
   language: es
   font:

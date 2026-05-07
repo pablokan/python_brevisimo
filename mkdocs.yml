@@ -19,6 +19,10 @@ nav:
     - Listas: colecciones/listas.md
     - Cadenas(Strings): colecciones/cadenas.md
     - Diccionarios: colecciones/diccionarios.md    
+  - Funciones:
+    - funciones/index.md 
+    - Funciones de usuario: funciones/func_base.md
+
 theme:
   language: es
   font:

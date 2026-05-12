@@ -17,4 +17,4 @@ De cualquier manera, en términos prácticos, vamos a dividir el tratamiento ent
 
 ## Vamos a verlas en detalle ->
 
-## Funciones [básicas](func_base.md) y [parametrización avanzada](func_av.md)
+## Funciones [básicas](func_base.md) y **parametrización avanzada** (pronto)

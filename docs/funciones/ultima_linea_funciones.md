@@ -1,0 +1,1 @@
+## Funciones [básicas](func_base.md) y [parametrización avanzada](func_av.md)

@@ -22,7 +22,8 @@ nav:
   - Funciones:
     - funciones/index.md 
     - Funciones de usuario: funciones/func_base.md
-
+    - Parametrización: funciones/func_av.md
+    
 theme:
   language: es
   font:

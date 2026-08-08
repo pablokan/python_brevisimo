@@ -18,12 +18,21 @@ nav:
     - colecciones/index.md
     - Listas: colecciones/listas.md
     - Cadenas(Strings): colecciones/cadenas.md
-    - Diccionarios: colecciones/diccionarios.md    
+    - Diccionarios: colecciones/diccionarios.md
   - Funciones:
     - funciones/index.md 
     - Funciones de usuario: funciones/func_base.md
     - Parametrización: funciones/func_av.md
-    
+  - Archivos: archivos.md
+  - Objetos: 
+    - objetos/index.md
+    - Encapsulamiento: objetos/encapsulamiento.md
+    - Métodos Mágicos (dunders): objetos/dunders.md
+    - Miembros de Clase: objetos/class_members.md
+    - Herencia: objetos/herencia.md
+    - Polimorfismo: objetos/polimorfismo.md
+    - Composición: objetos/composicion.md
+  
 theme:
   language: es
   font:
@@ -65,7 +74,7 @@ markdown_extensions:
   - attr_list
   - pymdownx.tilde
   - md_in_html
-   
- 
+      
+  
 extra_css:
   - css/extra.css
